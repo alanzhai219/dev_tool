@@ -1,0 +1,6 @@
+[submodule "third-party/vim-plug"]
+	path = third-party/vim-plug
+	url = git@github.com:junegunn/vim-plug.git
+[submodule "third-party/fzf"]
+	path = third-party/fzf
+	url = git@github.com:junegunn/fzf.git
