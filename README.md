@@ -23,7 +23,13 @@ git clone --recursive https://github.com/alanzhai219/nvim.git
 ~/.config/nvim/third-party/fzf/install.sh
 ```
 
-## step 3 - install plugins
+## step 3 - copy plug.vim
+```shell
+mkdir ~/.config/nvim/autoload
+cp ~/.config/nvim/third-party/vim-plug/plug.vim ~/.config/nvim/autoload
+```
+
+## step 4 - install plugins
 ```shell
 nvim
 :PlugInstall
