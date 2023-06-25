@@ -3,13 +3,13 @@
 """ Vim-Plug
 call plug#begin('~/.config/nvim/plugged')
 
-" icon
+" mark
 
 " colorscheme
-Plug 'dracula/vim'
-Plug 'folke/tokyonight.nvim'
-Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+" Plug 'dracula/vim'
+" Plug 'folke/tokyonight.nvim'
+" Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
+" Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " file explorer
 Plug 'preservim/nerdtree'
@@ -69,7 +69,7 @@ highlight NonText guibg=none
 " colorscheme tokyonight-storm
 " colorscheme tokyonight-day
 " colorscheme tokyonight-moon
-colorscheme nightfly
+" colorscheme nightfly
 " colorscheme catppuccin-latte catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 
 " nerdtree
