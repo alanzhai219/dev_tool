@@ -3,13 +3,16 @@
 """ Vim-Plug
 call plug#begin('~/.config/nvim/plugged')
 
-" mark
+" UI
+Plug 'rcarriga/nvim-notify'
+Plug 'stevearc/dressing.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
 
 " colorscheme
-" Plug 'dracula/vim'
-" Plug 'folke/tokyonight.nvim'
-" Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
-" Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'dracula/vim'
 
 " file explorer
 Plug 'preservim/nerdtree'
@@ -30,7 +33,6 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'scrooloose/syntastic'
 
 Plug 'luochen1990/rainbow'
-Plug 'rcarriga/nvim-notify'
 
 " starify
 Plug 'mhinz/vim-startify'
@@ -40,12 +42,17 @@ Plug 'preservim/tagbar'
 
 call plug#end()
 
+" mouse
+set mouse=""
+set clipboard=unnamed
+
 " fonts setting
 set encoding=utf-8
 set termencoding=utf-8
 set guifont=?
 
 set nu
+set relativenumber
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -56,6 +63,9 @@ set notimeout
 let mapleader = "\<SPACE>" " defualt
 
 
+" UI
+lua require("noice").setup()
+
 " theme
 " ==== dracula.nvim ====
 syntax on
@@ -63,14 +73,12 @@ highlight Pmenu guibg=white guifg=black gui=bold
 highlight Comment gui=bold
 highlight Normal gui=none
 highlight NonText guibg=none
-" colorscheme dracula
+colorscheme dracula
 " colorscheme onedarker
 " colorscheme tokyonight-night
 " colorscheme tokyonight-storm
 " colorscheme tokyonight-day
 " colorscheme tokyonight-moon
-" colorscheme nightfly
-" colorscheme catppuccin-latte catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 
 " nerdtree
 nnoremap <LEADER>n : NERDTreeToggle<CR>
@@ -99,3 +107,24 @@ let g:rainbow_active = 1
 
 " tagbar
 nmap <LEADER>t :TagbarToggle<CR>
+
+" cpp syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+"
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_cpp_check_header = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_cpp_cpplint_exec = 'cpplint'
+" let g:syntastic_cpp_checkers = ['cpplint', 'gcc', 'clang']
+" 设置 cpplint 的错误级别阈值（默认是 5），级别低于这一设置的不会显示
+" let g:syntastic_cpp_cpplint_thres = 5
+" let syntastic_aggregate_errors = 1
+" let g:syntastic_error_symbol = "✗"
+" let g:syntastic_warning_symbol = "⚠"
+" let g:syntastic_style_error_symbol = '!'
+" let g:syntastic_style_warning_symbol = '?'
+"
