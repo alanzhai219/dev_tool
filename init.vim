@@ -1,4 +1,29 @@
+" mouse
+set mouse=""
+set clipboard=unnamed
+
+" fonts setting
+set encoding=utf-8
+set termencoding=utf-8
+set guifont=?
+
+set number
+set relativenumber
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set ignorecase
+set smartcase
+set notimeout
+
+let mapleader = "\<SPACE>" " defualt
+
 """ Optixal's Neovim Init.vim
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  :exe '!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+              \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  au VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 """ Vim-Plug
 call plug#begin('~/.config/nvim/plugged')
@@ -41,27 +66,6 @@ Plug 'mhinz/vim-startify'
 Plug 'preservim/tagbar'
 
 call plug#end()
-
-" mouse
-set mouse=""
-set clipboard=unnamed
-
-" fonts setting
-set encoding=utf-8
-set termencoding=utf-8
-set guifont=?
-
-set nu
-set relativenumber
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set ignorecase
-set smartcase
-set notimeout
-
-let mapleader = "\<SPACE>" " defualt
-
 
 " UI
 lua require("noice").setup()
