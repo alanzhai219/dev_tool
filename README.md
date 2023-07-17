@@ -1,36 +1,21 @@
 # nvim
 nvim tool and config
 
-# clone
+## backup
 ```shell
-git clone --recursive https://github.com/alanzhai219/nvim.git
+# required
+mv ~/.config/nvim ~/.config/nvim.bak
 ```
 
-# install
-## step 0 - create config dir
+## clone
 ```shell
-mkdir -p ~/.config
-cd ~/.config
+git clone https://github.com/alanzhai219/nvim.git ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 ```
 
-## step 1 - clone the repo
-```shell
-git clone --recursive https://github.com/alanzhai219/nvim.git
-```
-
-## step 2 - install fzf
-```shell
-~/.config/nvim/third-party/fzf/install.sh
-```
-
-## step 3 - copy plug.vim
-```shell
-mkdir ~/.config/nvim/autoload
-cp ~/.config/nvim/third-party/vim-plug/plug.vim ~/.config/nvim/autoload
-```
-
-## step 4 - install plugins
-```shell
-nvim
-:PlugInstall
-```
+## other
+- git-delta
+- ctags
+- fd
+- ripgrep
+- peda
