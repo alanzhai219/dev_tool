@@ -109,6 +109,11 @@ let g:cpp_class_decl_highlight = 1
 
 " rainbow
 let g:rainbow_active = 1
+let g:rainbow_conf = {
+\   'separately': {
+\       'cmake': 0,
+\   }
+\}
 
 " tagbar
 nmap <LEADER>t :TagbarToggle<CR>
